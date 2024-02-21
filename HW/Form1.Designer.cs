@@ -81,6 +81,7 @@ namespace HW
             this.button4.Text = "Задание 4";
             this.toolTip4.SetToolTip(this.button4, "Каталог товаров");
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // EXIT
             // 
@@ -90,6 +91,7 @@ namespace HW
             this.EXIT.TabIndex = 4;
             this.EXIT.Text = "Выход";
             this.EXIT.UseVisualStyleBackColor = true;
+            this.EXIT.Click += new System.EventHandler(this.EXIT_Click);
             // 
             // toolTip1
             // 

@@ -8,12 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Catalog
+namespace HW
 {
-    public partial class Form1 : Form
+    public partial class CatalogStart : Form
     {
         Tovar t = null;
-        public Form1()
+        public CatalogStart()
         {
             InitializeComponent();
         }
@@ -21,10 +21,27 @@ namespace Catalog
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             t = new Tovar();
-            Form2 form2 = new Form2(t);
-            if(form2.ShowDialog()==DialogResult.OK)
+            CatalogWindow catalogWindow1 = new CatalogWindow(t);
+            if (catalogWindow1.ShowDialog() == DialogResult.OK)
             {
                 listBox1.Items.Add(t);
+            }
+        }
+
+        private void buttonEdit_Click(object sender, EventArgs e)
+        {
+            CatalogWindow catalogWindow1 = new CatalogWindow(t);
+            if (listBox1.SelectedIndex == -1)
+            {
+                MessageBox.Show("Error");
+            }
+            else
+
+            if (catalogWindow1.ShowDialog() == DialogResult.OK)
+            {
+
+                listBox1.Items.Insert(listBox1.SelectedIndex, t);
+                listBox1.Items.RemoveAt(listBox1.SelectedIndex);
             }
         }
 
@@ -42,24 +59,5 @@ namespace Catalog
         {
             listBox1.Items.Clear();
         }
-
-        private void buttonEdit_Click(object sender, EventArgs e)
-        {
-            Form2 form2 = new Form2(t);
-            if (listBox1.SelectedIndex == -1)
-            {
-                MessageBox.Show("Error");
-            }
-            else
-
-            if (form2.ShowDialog() == DialogResult.OK)
-            {
-                
-                listBox1.Items.Insert(listBox1.SelectedIndex, t);
-                listBox1.Items.RemoveAt(listBox1.SelectedIndex);
-            }
-        }
-
-        // insert и selected index для edit
     }
 }

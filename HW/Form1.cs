@@ -21,5 +21,16 @@ namespace HW
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            CatalogHW f2 = new CatalogHW();
+            f2.ShowDialog();
+        }
+
+        private void EXIT_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

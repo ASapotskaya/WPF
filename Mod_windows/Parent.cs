@@ -53,8 +53,8 @@ namespace Mod_windows
 
             //третий вариант
 
-            //Child f2 = new Child();
-            //f2.ShowDialog(tb_parent.Text);
+            Child f2 = new Child();
+            f2.ShowDialog(tb_parent.Text);
         }
     }
 }
