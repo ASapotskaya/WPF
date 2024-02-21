@@ -45,19 +45,19 @@ namespace Catalog
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
-            //Form2 form2 = new Form2(t);
-            //if (listBox1.SelectedIndex == -1)
-            //{
-            //    MessageBox.Show("Error");
-            //}
-            //else
-              
-            //if (form2.ShowDialog() == DialogResult.OK)
-            //{ 
-            //    listBox1.Items.Insert(listBox1.SelectedIndex,t);
-            //}
+            Form2 form2 = new Form2(t);
+            if (listBox1.SelectedIndex == -1)
+            {
+                MessageBox.Show("Error");
+            }
+            else
 
-            //попытки что то вспомнить( не обращайте внимания)
+            if (form2.ShowDialog() == DialogResult.OK)
+            {
+                listBox1.Items.Insert(listBox1.SelectedIndex, t);
+                listBox1.Items.RemoveAt(listBox1.SelectedIndex);
+
+            }
         }
 
         // insert и selected index для edit

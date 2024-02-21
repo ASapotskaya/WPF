@@ -38,6 +38,7 @@ namespace HW
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip4 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // button1
@@ -67,6 +68,7 @@ namespace HW
             this.button3.Size = new System.Drawing.Size(212, 131);
             this.button3.TabIndex = 2;
             this.button3.Text = "Задание 3";
+            this.toolTip3.SetToolTip(this.button3, "Анкета");
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -77,6 +79,7 @@ namespace HW
             this.button4.Size = new System.Drawing.Size(209, 127);
             this.button4.TabIndex = 3;
             this.button4.Text = "Задание 4";
+            this.toolTip4.SetToolTip(this.button4, "Каталог товаров");
             this.button4.UseVisualStyleBackColor = true;
             // 
             // EXIT
@@ -95,6 +98,14 @@ namespace HW
             // toolTip2
             // 
             this.toolTip2.ToolTipTitle = "Задание 2";
+            // 
+            // toolTip3
+            // 
+            this.toolTip3.ToolTipTitle = "Задание 3";
+            // 
+            // toolTip4
+            // 
+            this.toolTip4.ToolTipTitle = "Задание 4";
             // 
             // Form1
             // 
@@ -122,6 +133,7 @@ namespace HW
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ToolTip toolTip2;
         private System.Windows.Forms.ToolTip toolTip3;
+        private System.Windows.Forms.ToolTip toolTip4;
     }
 }
 

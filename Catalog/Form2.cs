@@ -17,7 +17,7 @@ namespace Catalog
         public Form2(Tovar tmp)
         {
             InitializeComponent();
-
+            this.tmp = tmp;
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -33,7 +33,7 @@ namespace Catalog
             }
             else
             {
-                tmp = new Tovar();
+                
                 tmp.Name = tbName.Text;
                 tmp.Country = tbCountry.Text;
                 tmp.Price = Convert.ToDouble(tbCost.Text);
